@@ -22,16 +22,16 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./htiyed
+        working-directory: ./htiyedA
 
       - name: Run linting
         run: npm run lint
-        working-directory: ./htiyed
+        working-directory: ./htiyedA
 
       - name: Run tests
         run: npm test -- --watch=false --no-progress
-        working-directory: ./htiyed
+        working-directory: ./htiyedA
 
       - name: Build application
         run: npm run build --prod
-        working-directory: ./htiyed
+        working-directory: ./htiyedA
