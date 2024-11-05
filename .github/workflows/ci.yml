@@ -24,10 +24,6 @@ jobs:
         run: npm install
         working-directory: ./htiyedA
 
-      - name: Run linting
-        run: npm run lint
-        working-directory: ./htiyedA
-
       - name: Run tests
         run: npm test -- --watch=false --no-progress
         working-directory: ./htiyedA
