@@ -1,7 +1,5 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
-import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { AppComponent } from './app.component'; // Import your standalone component
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -9,8 +7,7 @@ describe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FormsModule, HttpClientModule],
-      declarations: [AppComponent],
+      imports: [AppComponent], // Import standalone component here
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
