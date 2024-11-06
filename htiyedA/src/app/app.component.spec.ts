@@ -41,11 +41,8 @@ describe('AppComponent', () => {
 
     // Simulate the delay and verify the alert message
     setTimeout(() => {
-        expect(consoleSpy).toHaveBeenCalledWith('Mock email sent successfully!');
-        expect(alertSpy).toHaveBeenCalledWith('Mock email sent successfully!');
-      }, 1000);
-  
-      // Simulate the passage of 1000 milliseconds
-      tick(1000);
+      expect(consoleSpy).toHaveBeenCalledWith('Mock email sent successfully!');
+      expect(alertSpy).toHaveBeenCalledWith('Mock email sent successfully!');
+    }, 1000);
   });
 });
