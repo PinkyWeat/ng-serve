@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [FormsModule, HttpClientModule] // Using HttpClientModule to provide HttpClient
+  imports: [FormsModule, HttpClientModule]
 })
 export class AppComponent {
   email: string = '';
