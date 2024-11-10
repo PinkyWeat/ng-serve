@@ -4,8 +4,6 @@ on:
   pull_request:
     branches:
       - master
-    types:
-      - closed
 
 jobs:
   build-and-test:
@@ -35,6 +33,9 @@ jobs:
       - name: Build application
         run: npm run build --prod
         working-directory: ./htiyedA
+      
+      - name: Install AWS Amplify CLI
+        run: npm install -g @aws-amplify/cli
 
       - name: Deploy to AWS Amplify
         run: amplify publish --yes
