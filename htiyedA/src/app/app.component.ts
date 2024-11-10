@@ -11,8 +11,8 @@ import { FormsModule } from '@angular/forms';
   imports: [FormsModule, HttpClientModule]
 })
 export class AppComponent {
-  email: string = '';
-  name: string = '';
+  email = '';
+  name = '';
 
   constructor(private http: HttpClient) {}
 
