@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { UserFormComponent } from './user-form/user-form.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [FormsModule, HttpClientModule]
+  imports: [FormsModule, HttpClientModule, UserFormComponent]
 })
 export class AppComponent {
   email = '';
