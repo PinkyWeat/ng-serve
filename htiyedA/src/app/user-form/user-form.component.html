@@ -12,7 +12,7 @@
     <span class="error-message" *ngIf="userForm.get('email')?.touched && userForm.get('email')?.errors?.['required']">
       Email is required.
     </span>
-    <span class="error-message" *ngIf="userForm.get('email')?.touched && userForm.get('email')?.errors?.email">
+    <span class="error-message" *ngIf="userForm.get('email')?.touched && userForm.get('email')?.errors?.['email']">
       Enter a valid email address.
     </span>
   </div>
