@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { WelcomeSignComponent } from './components/welcome-sign/welcome-sign.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 
 @Component({
@@ -9,7 +10,7 @@ import { UserFormComponent } from './components/user-form/user-form.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [FormsModule, HttpClientModule, UserFormComponent]
+  imports: [FormsModule, HttpClientModule, UserFormComponent, WelcomeSignComponent]
 })
 export class AppComponent {
   email = '';
