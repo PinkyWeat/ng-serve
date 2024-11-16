@@ -1,61 +1,8 @@
-$form-bg-color: #f9f9f9;
-$form-label-color: #555;
-$form-input-border: #ccc;
-$form-button-color: #007bff;
-$form-button-hover-color: #0056b3;
-
-.form-container {
+.whole-container {
+  background-color: rgb(243, 247, 249);
+  width: 100%;
+  max-height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: $form-bg-color;
-  padding: 20px;
-
-  h2 {
-    color: darken($form-label-color, 20%);
-    margin-bottom: 20px;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    max-width: 300px;
-
-    label {
-      font-size: 1rem;
-      color: $form-label-color;
-    }
-
-    input {
-      padding: 10px;
-      font-size: 1rem;
-      border: 1px solid $form-input-border;
-      border-radius: 4px;
-      width: 100%;
-
-      &:focus {
-        border-color: lighten($form-button-color, 10%);
-        outline: none;
-      }
-    }
-
-    button {
-      padding: 10px 20px;
-      font-size: 1rem;
-      background-color: $form-button-color;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background-color: $form-button-hover-color;
-      }
-    }
-  }
 }

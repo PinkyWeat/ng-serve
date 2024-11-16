@@ -1,12 +1,4 @@
-<div class="form-container">
-  <h2>Send Email</h2>
-  <form (ngSubmit)="sendEmail()">
-    <label for="email">Email</label>
-    <input type="email" id="email" [(ngModel)]="email" name="email" required />
-
-    <label for="name">Name</label>
-    <input type="text" id="name" [(ngModel)]="name" name="name" required />
-
-    <button type="submit">Send</button>
-  </form>
+<div class="whole-container">
+  <app-welcome-sign></app-welcome-sign>
+  <app-user-form></app-user-form>
 </div>
