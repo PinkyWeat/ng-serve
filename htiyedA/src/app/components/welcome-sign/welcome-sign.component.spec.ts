@@ -8,7 +8,7 @@ describe('WelcomeSignComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [WelcomeSignComponent]
+      declarations: []
     })
     .compileComponents();
 
