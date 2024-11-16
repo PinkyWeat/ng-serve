@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-user-form',
   templateUrl: './user-form.component.html',
@@ -22,22 +23,20 @@ export class UserFormComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       birthdate: ['', Validators.required],
       country: ['', Validators.required],
-      referral: [''] // Optional field, no Validators.required
+      referral: ['']
     });
   }
 
-  onSubmit() {
-    console.log('Form Submitted:', this.userForm.valid);
-    console.log('Form Data:', this.userForm.value);
+  onSubmit(event: Event) {
+    if (event) {
+      event.preventDefault();
+    }
     this.formSubmitted = true;
-  
     if (this.userForm.valid) {
+      console.log('Form Data:', this.userForm.value);
       alert('Mock email sent successfully!');
-      this.userForm.reset();
-      this.formSubmitted = false;
-    } else {
-      console.log('Form is invalid. Errors:', this.userForm.errors);
     }
   }
+  
   
 }
