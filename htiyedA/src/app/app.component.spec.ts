@@ -1,4 +1,4 @@
-import { TestBed, ComponentFixture } from '@angular/core/testing';
+import { TestBed, ComponentFixture, fakeAsync, tick } from '@angular/core/testing';
 import { AppComponent } from './app.component'; // Import your standalone component
 
 describe('AppComponent', () => {
@@ -19,7 +19,7 @@ describe('AppComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should send email with valid payload', () => {
+  it('should send email with valid payload', fakeAsync(() => {
     // Arrange: Set mock values for email and name
     component.email = 'test@example.com';
     component.name = 'Test User';
@@ -37,9 +37,9 @@ describe('AppComponent', () => {
     });
 
     // Simulate the delay and verify the alert message
-    setTimeout(() => {
-      expect(consoleSpy).toHaveBeenCalledWith('Mock email sent successfully!');
-      expect(alertSpy).toHaveBeenCalledWith('Mock email sent successfully!');
-    }, 1000);
-  });
+    tick(1000); // Simulate the passage of 1000ms
+    fixture.detectChanges(); // Ensure Angular processes any changes
+    expect(consoleSpy).toHaveBeenCalledWith('Mock email sent successfully!');
+    expect(alertSpy).toHaveBeenCalledWith('Mock email sent successfully!');
+  }));
 });
