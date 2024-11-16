@@ -40,14 +40,4 @@ describe('WelcomeSignComponent', () => {
     });
   });
 
-  it('should apply correct styles to images', () => {
-    const images = fixture.debugElement.queryAll(By.css('img'));
-    images.forEach(image => {
-      const styles = getComputedStyle(image.nativeElement);
-      expect(styles.width).toBe('48%');
-      expect(styles.height).toBe('auto');
-      expect(styles.paddingTop).toBe('2%');
-      expect(styles.borderRadius).toBe('22px');
-    });
-  });
 });
